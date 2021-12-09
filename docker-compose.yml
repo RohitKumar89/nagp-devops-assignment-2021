@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  nagp-assignment:
+    build: .
+    restart: always
+    ports:
+      - 8086:8086
+    depends_on:
+      - mysql-standalone
+    links:
+      - mysql-standalone:mysql-standalone
+  mysql-standalone:
+    image: "mysql:5.6"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
