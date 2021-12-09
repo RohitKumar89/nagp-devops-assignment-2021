@@ -8,15 +8,15 @@ Command to run the mysql container
 ex - `spring.datasource.url = jdbc:mysql://mysql-standalone:3306/test`
 
 3. Create a `Dockerfile` for creating a docker image from the nagp-devops-assignment-2021, exposing 8086 port to run application because on 8080 jenkins is running <br>
-FROM amazoncorretto:8-alpine3.12<br>
-COPY target/nagp-assignment.jar /var/lib/nagp-assignment.jar<br>
-EXPOSE 8086<br>
-ENTRYPOINT ["java", "-jar", "/var/lib/nagp-assignment.jar" ]<br>
+`FROM amazoncorretto:8-alpine3.12`
+`COPY target/nagp-assignment.jar /var/lib/nagp-assignment.jar`
+`EXPOSE 8086`
+`ENTRYPOINT ["java", "-jar", "/var/lib/nagp-assignment.jar" ]`
 
 4. Using the Dockerfile create the Docker image.
 From the directory of Dockerfile - `docker build . -t nagp-assignment`
 
-5. Run the Docker image (users-mysql) created in #4.
+5. Run the Docker image (nagp-assignment) created in #4.
 `docker build . -t nagp-assignment`
 
 ## Useful Docker commands
