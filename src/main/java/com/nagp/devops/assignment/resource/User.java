@@ -6,14 +6,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "employee")
 public class User {
 
     @Id
     private Integer id;
     private String name;
-    private Integer salary;
-    private String teamName;
+    private String email;
+    private String jobTitle;
+    private String imageUrl;
+    private String phone;
 
     public User() {
     }
@@ -34,19 +36,49 @@ public class User {
         this.name = name;
     }
 
-    public Integer getSalary() {
-        return salary;
-    }
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
 
-    public void setSalary(Integer salary) {
-        this.salary = salary;
-    }
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getTeamName() {
-        return teamName;
-    }
+	/**
+	 * @return the jobTitle
+	 */
+	public String getJobTitle() {
+		return jobTitle;
+	}
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
-    }
+	/**
+	 * @param jobTitle the jobTitle to set
+	 */
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 }

@@ -57,8 +57,10 @@ public class UserApplicationUnitTest {
 		User user = new User();
 		user.setId(1);
 		user.setName("Rohit Kumar");
-		user.setSalary(3698756);
-		user.setTeamName("Development");
+		user.setEmail("rohit.chhonker@gmail.com");
+		user.setJobTitle("Business Analyst");
+		user.setPhone("9768987642");
+		user.setImageUrl("profile.jpg");
 		return user;
 	}
 }
